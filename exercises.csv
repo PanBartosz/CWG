@@ -1,0 +1,23 @@
+active,name,implement,weight,difficulty,tabatable,pattern,unilateral
+TRUE,One Arm Swing,Single Kettlebell,16,easy,TRUE,hinge,TRUE
+TRUE,One Arm Swing,Single Kettlebell,24,medium,TRUE,hinge,TRUE
+TRUE,One Arm Swing,Single Kettlebell,32,hard,TRUE,hinge,TRUE
+TRUE,Two Arm Swing,Single Kettlebell,24,easy,TRUE,hinge,FALSE
+TRUE,Two Arm Swing,Single Kettlebell,32,medium,TRUE,hinge,FALSE
+TRUE,Suitcase Deadlift,Single Kettlebell,24,easy,FALSE,hinge,TRUE
+TRUE,Suitcase Deadlift,Single Kettlebell,32,medium,FALSE,hinge,TRUE
+TRUE,Snatch,Single Kettlebell,16,medium,TRUE,"hinge, overhead",TRUE
+TRUE,Goblet Squat,Single Kettlebell,16,easy,TRUE,squat,TRUE
+TRUE,Goblet Squat,Single Kettlebell,24,medium,TRUE,squat,TRUE
+TRUE,Front Squat,Double Kettlebell,24,hard,FALSE,squat,FALSE
+TRUE,Push Press,Single Kettlebell,16,medium,FALSE,"overhead, press",TRUE
+TRUE,Push Press,Single Kettlebell,24,hard,FALSE,"overhead, press",TRUE
+TRUE,Jerk,Single Kettlebell,16,medium,FALSE,"overhead, press, squat",TRUE
+TRUE,Jerk,Single Kettlebell,24,hard,FALSE,"overhead, press, squat",TRUE
+TRUE,Gorilla Row,Double Kettlebell,24,medium,FALSE,pull,FALSE
+TRUE,Gorilla Row,Double Kettlebell,32,hard,FALSE,pull,FALSE
+TRUE,Low-to-high Swing,Single Clubbell,8,easy,TRUE,hinge,TRUE
+TRUE,Pullover,Single Clubbell,8,easy,FALSE,"overhead, pull",TRUE
+TRUE,Shield Cast,Single Clubbell,8,medium,FALSE,"overhead, pull",TRUE
+TRUE,Push up,Bodyweight,,medium,FALSE,"horizontal, press",FALSE
+TRUE,Burpee,Bodyweight,,medium,TRUE,"horizontal, press, squat",FALSE
