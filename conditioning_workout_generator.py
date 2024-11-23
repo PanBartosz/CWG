@@ -55,6 +55,8 @@ def generate_hb(exercises, weight_options, long=False, implements=None):
     if weight_options:
         mask = False  # Start with a False mask
         for implement in weight_options.keys():
+            if implement == "Bodyweight":
+                mask |= (eligible['implement'] == implement)
             for weight in weight_options[implement]:
                 mask |= (eligible['implement'] == implement) & (
                     eligible['weight'] == weight)
@@ -83,6 +85,8 @@ def generate_tabata(exercises, weight_options, modified=False, implements=None, 
     if weight_options:
         mask = False  # Start with a False mask
         for implement in weight_options.keys():
+            if implement == "Bodyweight":
+                mask |= (eligible['implement'] == implement)
             for weight in weight_options[implement]:
                 mask |= (eligible['implement'] == implement) & (
                     eligible['weight'] == weight)
@@ -108,6 +112,8 @@ def generate_omem(exercises, length, weight_options, overlap=False, implements=N
     if weight_options:
         mask = False  # Start with a False mask
         for implement in weight_options.keys():
+            if implement == "Bodyweight":
+                mask |= (eligible['implement'] == implement)
             for weight in weight_options[implement]:
                 mask |= (eligible['implement'] == implement) & (
                     eligible['weight'] == weight)
@@ -150,6 +156,8 @@ def generate_emom(exercises, length, n_exercises, weight_options, overlap=False,
     if weight_options:
         mask = False  # Start with a False mask
         for implement in weight_options.keys():
+            if implement == "Bodyweight":
+                mask |= (eligible['implement'] == implement)
             for weight in weight_options[implement]:
                 mask |= (eligible['implement'] == implement) & (
                     eligible['weight'] == weight)
