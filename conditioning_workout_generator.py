@@ -226,7 +226,9 @@ with EMOM_tab:
                                                   key="emom_selected_implements")
         weight_options = {}
         for implement in emom_selected_implements:
-            if implement != "Bodyweight":
+            if implement == "Bodyweight":
+                weight_options[implement] = {}
+            else:
                 wts = list(
                     set(exercises[exercises["implement"] == implement]["weight"]))
                 weight_options[implement] = st.multiselect(f"Select weights for {implement}",
@@ -263,7 +265,9 @@ with OMEM_tab:
                                                   key="omem_selected_implements")
         weight_options = {}
         for implement in omem_selected_implements:
-            if implement != "Bodyweight":
+            if implement == "Bodyweight":
+                weight_options[implement] = {}
+            else:
                 wts = list(
                     set(exercises[exercises["implement"] == implement]["weight"]))
                 weight_options[implement] = st.multiselect(f"Select weights for {implement}",
@@ -299,7 +303,9 @@ with tabata_tab:
                                                   key="tabata_selected_implements")
         weight_options = {}
         for implement in tabata_selected_implements:
-            if implement != "Bodyweight":
+            if implement == "Bodyweight":
+                weight_options[implement] = {}
+            else:
                 wts = list(
                     set(exercises[exercises["implement"] == implement]["weight"]))
                 weight_options[implement] = st.multiselect(f"Select weights for {implement}",
@@ -329,12 +335,14 @@ with hb_tab:
                                                   options=hb_possible_implements,
                                                   default=hb_possible_implements,
                                                   key="hb_selected_implements")
-        weight_options = {}
+        hb_weight_options = {}
         for implement in hb_selected_implements:
-            if implement != "Bodyweight":
+            if implement == "Bodyweight":
+                hb_weight_options[implement] = {}
+            else:
                 wts = list(
                     set(exercises[exercises["implement"] == implement]["weight"]))
-                weight_options[implement] = st.multiselect(f"Select weights for {implement}",
+                hb_weight_options[implement] = st.multiselect(f"Select weights for {implement}",
                                                            options=wts,
                                                            default=wts,
                                                            key=f"hb_wo_{implement}",
@@ -346,7 +354,7 @@ with hb_tab:
             with redirect_stdout(message):
                 generate_hb(f_exercises,
                               implements=hb_selected_implements,
-                              weight_options=weight_options)
+                              weight_options=hb_weight_options)
             workout = message.getvalue()
         with hb_main:
             st.markdown(workout)
